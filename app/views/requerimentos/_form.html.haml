@@ -1,0 +1,6 @@
+= semantic_form_for(@requerimento) do |f|
+  = f.input :datasolicitacao, :label => 'datasolicitacao'
+  = f.input :cliente, :member_label => :nome, :label => 'Cliente'
+  = f.input :contrato, :member_label => :datainicial, :label => 'Contrato'
+   
+  = f.submit 'Salvar'

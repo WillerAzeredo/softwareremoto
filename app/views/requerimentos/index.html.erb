@@ -1,0 +1,27 @@
+<h1>Listing requerimentos</h1>
+
+<table>
+  <tr>
+    <th>Datasolicitacao</th>
+    <th>Contrato</th>
+    <th>Cliente</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @requerimentos.each do |requerimento| %>
+  <tr>
+    <td><%= requerimento.datasolicitacao %></td>
+    <td><%= requerimento.contrato %></td>
+    <td><%= requerimento.cliente %></td>
+    <td><%= link_to 'Show', requerimento %></td>
+    <td><%= link_to 'Edit', edit_requerimento_path(requerimento) %></td>
+    <td><%= link_to 'Excluir', requerimento, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Requerimento', new_requerimento_path %>

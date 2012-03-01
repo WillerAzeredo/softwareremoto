@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Datasolicitacao:</b>
+  <%= @requerimento.datasolicitacao %>
+</p>
+
+<p>
+  <b>Contrato:</b>
+  <%= @requerimento.contrato.datainicial %>
+</p>
+
+<p>
+  <b>Cliente:</b>
+  <%= @requerimento.cliente.nome %>
+</p>
+
+
+<%= link_to 'Edit', edit_requerimento_path(@requerimento) %> |
+<%= link_to 'Back', requerimentos_path %>
