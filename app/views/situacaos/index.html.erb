@@ -1,0 +1,23 @@
+<h1>Listing situacaos</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @situacaos.each do |situacao| %>
+  <tr>
+    <td><%= situacao.nome %></td>
+    <td><%= link_to 'Show', situacao %></td>
+    <td><%= link_to 'Edit', edit_situacao_path(situacao) %></td>
+    <td><%= link_to 'Excluir', situacao, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Situacao', new_situacao_path %>
