@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Local:</b>
+  <%= @reuniao.local %>
+</p>
+
+<p>
+  <b>Data:</b>
+  <%= @reuniao.data %>
+</p>
+
+<p>
+  <b>Tipo:</b>
+  <%= @reuniao.tipo %>
+</p>
+
+<p>
+  <b>Hora:</b>
+  <%= @reuniao.hora %>
+</p>
+
+
+<%= link_to 'Edit', edit_reuniao_path(@reuniao) %> |
+<%= link_to 'Back', reuniaos_path %>

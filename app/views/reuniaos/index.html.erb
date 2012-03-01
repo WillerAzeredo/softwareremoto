@@ -1,0 +1,29 @@
+<h1>Listing reuniaos</h1>
+
+<table>
+  <tr>
+    <th>Local</th>
+    <th>Data</th>
+    <th>Tipo</th>
+    <th>Hora</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @reuniaos.each do |reuniao| %>
+  <tr>
+    <td><%= reuniao.local %></td>
+    <td><%= reuniao.data %></td>
+    <td><%= reuniao.tipo %></td>
+    <td><%= reuniao.hora %></td>
+    <td><%= link_to 'Show', reuniao %></td>
+    <td><%= link_to 'Edit', edit_reuniao_path(reuniao) %></td>
+    <td><%= link_to 'Excluir', reuniao, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Reuniao', new_reuniao_path %>
