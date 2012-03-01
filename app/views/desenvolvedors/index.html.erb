@@ -1,0 +1,35 @@
+<h1>Listing desenvolvedors</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Endereco</th>
+    <th>Telefone</th>
+    <th>Cpf</th>
+    <th>Rg</th>
+    <th>Dtnascimento</th>
+    <th>Email</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @desenvolvedors.each do |desenvolvedor| %>
+  <tr>
+    <td><%= desenvolvedor.nome %></td>
+    <td><%= desenvolvedor.endereco %></td>
+    <td><%= desenvolvedor.telefone %></td>
+    <td><%= desenvolvedor.cpf %></td>
+    <td><%= desenvolvedor.rg %></td>
+    <td><%= desenvolvedor.dtnascimento %></td>
+    <td><%= desenvolvedor.email %></td>
+    <td><%= link_to 'Show', desenvolvedor %></td>
+    <td><%= link_to 'Edit', edit_desenvolvedor_path(desenvolvedor) %></td>
+    <td><%= link_to 'Excluir', desenvolvedor, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Desenvolvedor', new_desenvolvedor_path %>

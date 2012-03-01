@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @desenvolvedor.nome %>
+</p>
+
+<p>
+  <b>Endereco:</b>
+  <%= @desenvolvedor.endereco %>
+</p>
+
+<p>
+  <b>Telefone:</b>
+  <%= @desenvolvedor.telefone %>
+</p>
+
+<p>
+  <b>Cpf:</b>
+  <%= @desenvolvedor.cpf %>
+</p>
+
+<p>
+  <b>Rg:</b>
+  <%= @desenvolvedor.rg %>
+</p>
+
+<p>
+  <b>Dtnascimento:</b>
+  <%= @desenvolvedor.dtnascimento %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @desenvolvedor.email %>
+</p>
+
+
+<%= link_to 'Edit', edit_desenvolvedor_path(@desenvolvedor) %> |
+<%= link_to 'Back', desenvolvedors_path %>
