@@ -1,4 +1,6 @@
 Softwareremoto::Application.routes.draw do
+  resources :contratos
+
   resources :reuniaos
 
   resources :situacaos

@@ -1,0 +1,31 @@
+<h1>Listing contratos</h1>
+
+<table>
+  <tr>
+    <th>Datainicial</th>
+    <th>Datafinal</th>
+    <th>Valorestimado</th>
+    <th>Valorfinal</th>
+    <th>Formapagamento</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @contratos.each do |contrato| %>
+  <tr>
+    <td><%= contrato.datainicial %></td>
+    <td><%= contrato.datafinal %></td>
+    <td><%= contrato.valorestimado %></td>
+    <td><%= contrato.valorfinal %></td>
+    <td><%= contrato.formapagamento %></td>
+    <td><%= link_to 'Show', contrato %></td>
+    <td><%= link_to 'Edit', edit_contrato_path(contrato) %></td>
+    <td><%= link_to 'Excluir', contrato, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Contrato', new_contrato_path %>

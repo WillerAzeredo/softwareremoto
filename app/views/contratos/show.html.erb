@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Datainicial:</b>
+  <%= @contrato.datainicial %>
+</p>
+
+<p>
+  <b>Datafinal:</b>
+  <%= @contrato.datafinal %>
+</p>
+
+<p>
+  <b>Valorestimado:</b>
+  <%= @contrato.valorestimado %>
+</p>
+
+<p>
+  <b>Valorfinal:</b>
+  <%= @contrato.valorfinal %>
+</p>
+
+<p>
+  <b>Formapagamento:</b>
+  <%= @contrato.formapagamento %>
+</p>
+
+
+<%= link_to 'Edit', edit_contrato_path(@contrato) %> |
+<%= link_to 'Back', contratos_path %>
