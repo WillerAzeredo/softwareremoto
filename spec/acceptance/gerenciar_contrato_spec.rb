@@ -6,14 +6,14 @@ feature 'Gerenciar Contrato' do
   before :each do
   end
   
-  scenario 'incluir contrato' do
+  scenario 'Incluir Contrato' do
    
     visit new_contrato_path
     preencher_e_verificar_contrato
 
   end
 
-  scenario 'alterar contrato' do #, :javascript => true do
+  scenario 'Alterar Contrato' do #, :javascript => true do
 
     contrato = FactoryGirl.create(:contrato)
 
@@ -22,7 +22,7 @@ feature 'Gerenciar Contrato' do
 
   end
 
-  scenario 'Excluir contrato' do #, :javascript => true do
+  scenario 'Excluir Contrato' do #, :javascript => true do
 
     contrato = FactoryGirl.create(:contrato)
 

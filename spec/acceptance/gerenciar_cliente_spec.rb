@@ -2,11 +2,11 @@
 
 require 'spec_helper'
 
-feature 'gerenciar cliente' do
+feature 'Gerenciar Cliente' do
   before :each do
   end
   
-  scenario 'incluir cliente' do
+  scenario 'Incluir Cliente' do
    
     visit new_cliente_path
     preencher_e_verificar_cliente
@@ -14,7 +14,7 @@ feature 'gerenciar cliente' do
 
   end
 
-  scenario 'alterar cliente' do #, :javascript => true do
+  scenario 'Alterar Cliente' do #, :javascript => true do
 
     cliente = FactoryGirl.create(:cliente)
 
@@ -23,7 +23,7 @@ feature 'gerenciar cliente' do
 
   end
 
-  scenario 'excluir cliente' do #, :javascript => true do
+  scenario 'Excluir Cliente' do #, :javascript => true do
 
     cliente = FactoryGirl.create(:cliente)
 

@@ -6,14 +6,14 @@ feature 'Gerenciar Reuniao' do
   before :each do
   end
   
-  scenario 'incluir reuniao' do
+  scenario 'Incluir Reuniao' do
    
     visit new_reuniao_path
     preencher_e_verificar_reuniao
 
   end
 
-  scenario 'alterar reuniao' do #, :javascript => true do
+  scenario 'Alterar Reuniao' do #, :javascript => true do
 
     reuniao = FactoryGirl.create(:reuniao)
 
@@ -22,7 +22,7 @@ feature 'Gerenciar Reuniao' do
 
   end
 
-  scenario 'Excluir reuniao' do #, :javascript => true do
+  scenario 'Excluir Reuniao' do #, :javascript => true do
 
     reuniao = FactoryGirl.create(:reuniao)
 

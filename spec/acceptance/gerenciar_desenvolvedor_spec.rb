@@ -4,14 +4,14 @@ feature 'Gerenciar Desenvolvedor' do
   before :each do
   end
   
-  scenario 'incluir desenvolvedor' do
+  scenario 'Incluir Desenvolvedor' do
    
     visit new_desenvolvedor_path
     preencher_e_verificar_desenvolvedor
 
   end
 
-  scenario 'alterar desenvolvedor' do #, :javascript => true do
+  scenario 'Alterar Desenvolvedor' do #, :javascript => true do
 
     desenvolvedor = FactoryGirl.create(:desenvolvedor)
 
@@ -20,7 +20,7 @@ feature 'Gerenciar Desenvolvedor' do
 
   end
 
-  scenario 'Excluir desenvolvedor' do #, :javascript => true do
+  scenario 'Excluir Desenvolvedor' do #, :javascript => true do
 
     desenvolvedor = FactoryGirl.create(:desenvolvedor)
 

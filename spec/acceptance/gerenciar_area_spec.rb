@@ -6,14 +6,14 @@ feature 'Gerenciar Area' do
   before :each do
   end
   
-  scenario 'incluir area' do
+  scenario 'Incluir Area' do
    
     visit new_area_path
     preencher_e_verificar_area
 
   end
 
-  scenario 'alterar area' do #, :javascript => true do
+  scenario 'Alterar Area' do #, :javascript => true do
 
     area = FactoryGirl.create(:area)
 
@@ -22,7 +22,7 @@ feature 'Gerenciar Area' do
 
   end
 
-  scenario 'Excluir area' do #, :javascript => true do
+  scenario 'Excluir Area' do #, :javascript => true do
 
     area = FactoryGirl.create(:area)
 

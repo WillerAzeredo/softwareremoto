@@ -6,14 +6,14 @@ feature 'Gerenciar Situacao' do
   before :each do
   end
   
-  scenario 'incluir situacao' do
+  scenario 'Incluir Situacao' do
    
     visit new_situacao_path
     preencher_e_verificar_situacao
 
   end
 
-  scenario 'alterar situacao' do #, :javascript => true do
+  scenario 'Alterar Situacao' do #, :javascript => true do
 
     situacao = FactoryGirl.create(:situacao)
 
@@ -22,7 +22,7 @@ feature 'Gerenciar Situacao' do
 
   end
 
-  scenario 'Excluir situacao' do #, :javascript => true do
+  scenario 'Excluir Situacao' do #, :javascript => true do
 
     situacao = FactoryGirl.create(:situacao)
 

@@ -6,7 +6,7 @@ feature 'Gerenciar Requerimento' do
   before :each do
   end
   
-  scenario 'incluir requerimento' do
+  scenario 'Incluir Requerimento' do
         
     cliente = FactoryGirl.create(:cliente,:nome => 'Rafael')
     contrato = FactoryGirl.create(:contrato,:datainicial => '11/02/2012')
@@ -16,7 +16,7 @@ feature 'Gerenciar Requerimento' do
 
   end
 
-  scenario 'alterar requerimento' do #, :javascript => true do
+  scenario 'Alterar Requerimento' do #, :javascript => true do
 
     cliente = FactoryGirl.create(:cliente,:nome => 'Rafael')
     requerimento = FactoryGirl.create(:requerimento, :cliente => cliente)
@@ -31,7 +31,7 @@ feature 'Gerenciar Requerimento' do
 
   end
 
-  scenario 'Excluir requerimento' do #, :javascript => true do
+  scenario 'Excluir Requerimento' do #, :javascript => true do
 
     cliente = FactoryGirl.create(:cliente,:nome => 'Rafael')
     requerimento = FactoryGirl.create(:requerimento, :cliente => cliente)

@@ -6,7 +6,7 @@ feature 'Gerenciar Projeto' do
   before :each do
   end
   
-  scenario 'incluir projeto' do
+  scenario 'Incluir Projeto' do
         
     area = FactoryGirl.create(:area,:nome => 'Informatica')
     situacao = FactoryGirl.create(:situacao,:nome => 'Em andamento')
@@ -19,7 +19,7 @@ feature 'Gerenciar Projeto' do
 
   end
 
-  scenario 'alterar projeto' do #, :javascript => true do
+  scenario 'Alterar Projeto' do #, :javascript => true do
     
     area = FactoryGirl.create(:area,:nome => 'Informatica')
     projeto = FactoryGirl.create(:projeto, :area => area)
@@ -42,7 +42,7 @@ feature 'Gerenciar Projeto' do
 
   end
 
-  scenario 'Excluir projeto' do #, :javascript => true do
+  scenario 'Excluir Projeto' do #, :javascript => true do
 
     area = FactoryGirl.create(:area,:nome => 'Informatica')
     projeto = FactoryGirl.create(:projeto, :area => area)
