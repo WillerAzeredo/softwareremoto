@@ -1,0 +1,11 @@
+= semantic_form_for(@projeto) do |f|
+  = f.input :nome, :label => 'nome'
+  = f.input :descricao, :label => 'descricao'
+  = f.input :versao, :label => 'versao'
+  = f.input :desenvolvedor, :member_label => :nome, :label => 'Desenvolvedor'
+  = f.input :area, :member_label => :nome, :label => 'Area'
+  = f.input :situacao, :member_label => :nome, :label => 'Situacao'
+  = f.input :reuniao, :member_label => :local, :label => 'Reuniao'
+  = f.input :requerimento, :member_label => :datasolicitacao, :label => 'Requerimento'
+   
+  = f.submit 'Salvar'

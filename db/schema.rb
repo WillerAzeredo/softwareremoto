@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120301210106) do
+ActiveRecord::Schema.define(:version => 20120301211911) do
 
   create_table "areas", :force => true do |t|
     t.string   "nome"
@@ -52,6 +52,25 @@ ActiveRecord::Schema.define(:version => 20120301210106) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "projetos", :force => true do |t|
+    t.string   "nome"
+    t.string   "descricao"
+    t.string   "versao"
+    t.integer  "requerimento_id"
+    t.integer  "area_id"
+    t.integer  "situacao_id"
+    t.integer  "reuniao_id"
+    t.integer  "desenvolvedor_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "projetos", ["area_id"], :name => "index_projetos_on_area_id"
+  add_index "projetos", ["desenvolvedor_id"], :name => "index_projetos_on_desenvolvedor_id"
+  add_index "projetos", ["requerimento_id"], :name => "index_projetos_on_requerimento_id"
+  add_index "projetos", ["reuniao_id"], :name => "index_projetos_on_reuniao_id"
+  add_index "projetos", ["situacao_id"], :name => "index_projetos_on_situacao_id"
 
   create_table "requerimentos", :force => true do |t|
     t.string   "datasolicitacao"

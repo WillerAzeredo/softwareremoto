@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @projeto.nome %>
+</p>
+
+<p>
+  <b>Descricao:</b>
+  <%= @projeto.descricao %>
+</p>
+
+<p>
+  <b>Versao:</b>
+  <%= @projeto.versao %>
+</p>
+
+<p>
+  <b>Requerimento:</b>
+  <%= @projeto.requerimento.datasolicitacao %>
+</p>
+
+<p>
+  <b>Area:</b>
+  <%= @projeto.area.nome %>
+</p>
+
+<p>
+  <b>Situacao:</b>
+  <%= @projeto.situacao.nome %>
+</p>
+
+<p>
+  <b>Reuniao:</b>
+  <%= @projeto.reuniao.local %>
+</p>
+
+<p>
+  <b>Desenvolvedor:</b>
+  <%= @projeto.desenvolvedor.nome %>
+</p>
+
+
+<%= link_to 'Edit', edit_projeto_path(@projeto) %> |
+<%= link_to 'Back', projetos_path %>

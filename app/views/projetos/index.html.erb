@@ -1,0 +1,37 @@
+<h1>Listing projetos</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Descricao</th>
+    <th>Versao</th>
+    <th>Requerimento</th>
+    <th>Area</th>
+    <th>Situacao</th>
+    <th>Reuniao</th>
+    <th>Desenvolvedor</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @projetos.each do |projeto| %>
+  <tr>
+    <td><%= projeto.nome %></td>
+    <td><%= projeto.descricao %></td>
+    <td><%= projeto.versao %></td>
+    <td><%= projeto.requerimento %></td>
+    <td><%= projeto.area %></td>
+    <td><%= projeto.situacao %></td>
+    <td><%= projeto.reuniao %></td>
+    <td><%= projeto.desenvolvedor %></td>
+    <td><%= link_to 'Show', projeto %></td>
+    <td><%= link_to 'Edit', edit_projeto_path(projeto) %></td>
+    <td><%= link_to 'Excluir', projeto, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Projeto', new_projeto_path %>
